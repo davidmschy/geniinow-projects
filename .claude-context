@@ -1,0 +1,31 @@
+# Genii Studio - CLI Agent Context
+# Load this when using Claude Code, Codex, Kimi, or OpenCode
+
+## Project
+Factory-built housing development pipeline. AI generates CAD/BIM plans from address/APN.
+
+## Tech Stack
+- FreeCAD 1.1.1 (CAD/BIM)
+- Python 3.12 + bundled FreeCAD interpreter
+- ERPNext v16 (project management)
+- GitHub (version control + plan publishing)
+- PM2 (agent orchestration)
+
+## Key Files
+- macros/FullPipeline.py - Main orchestrator
+- macros/GenerateSitePlan.py - Address → CAD
+- macros/FloorPlanGenerator.py - Architectural plans
+- macros/ComplianceEngine.py - HCD/Title24/CALGreen checks
+- macros/ERPNext_Integration.py - Auto-project creation
+- agents/pm2.config.js - 10-agent deployment
+
+## Business Rules
+- SIP walls 6.5" thick, roofs 8.25" thick
+- 14-gauge C-channel steel subfloors
+- HCD SHL 620 / Title 24 CF1R / CALGreen compliance required
+- All plans published to GitHub with Git LFS
+- ERPNext project auto-created per development
+
+## FreeCAD Execution
+Use: /Applications/FreeCAD.app/Contents/Resources/bin/python
+With: PYTHONPATH=/Applications/FreeCAD.app/Contents/Resources/lib
