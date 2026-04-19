@@ -1,0 +1,42 @@
+{
+  "project_name": "PlanSet_single_family_24x40_20260419_143923",
+  "prompt": "24x40 3-bed 2-bath single family, 1-story, SIP, Fresno CA",
+  "parameters": {
+    "type": "single_family",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "stories": 1,
+    "width": 24,
+    "depth": 40,
+    "height": 10,
+    "construction": "sip",
+    "jurisdiction": "fresno_ca",
+    "climate_zone": 13,
+    "modules": [
+      {
+        "id": "Module_A",
+        "width": 12.0,
+        "depth": 40,
+        "height": 10,
+        "floor": 1,
+        "unit": 1,
+        "type": "left_half"
+      },
+      {
+        "id": "Module_B",
+        "width": 12.0,
+        "depth": 40,
+        "height": 10,
+        "floor": 1,
+        "unit": 1,
+        "type": "right_half"
+      }
+    ],
+    "unit_count": 1,
+    "roof_type": "gable",
+    "foundation": "crawl_space",
+    "project_name": "PlanSet_single_family_24x40_20260419_143923"
+  },
+  "generated_at": "2026-04-19T14:39:23.079744",
+  "file_path": "/Users/davidschy/geniinow-projects/modules/generated_plans/PlanSet_single_family_24x40_20260419_143923.FCStd"
+}

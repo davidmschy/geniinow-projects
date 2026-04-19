@@ -1,0 +1,163 @@
+{
+  "project_metadata": {
+    "apn": "449-341-009",
+    "address": "549 N Parkview, Fresno, CA",
+    "developer": "HOME GENII DEVELOPMENT LLC",
+    "designer": "PreFab Innovations",
+    "designer_address": "PO Box 109, Fresno, CA 93707",
+    "submit_date": "2025-11-17",
+    "submit_number": "SUBMIT 1"
+  },
+  "lot_information": {
+    "dimensions": "100' x 100'",
+    "area_acres": 0.23,
+    "area_sf": 10000,
+    "annex": "548",
+    "census_block": "5006",
+    "census_tract": "20",
+    "zoning": "R-3N",
+    "street_frontage": "Parkway Drive"
+  },
+  "dwelling_specifications": {
+    "type": "2-story duplex",
+    "dimensions": "21.5' x 31'",
+    "total_sf": 1333,
+    "stories": 2,
+    "units": [
+      {
+        "level": "lower",
+        "bedrooms": 2,
+        "type": "2 BR unit"
+      },
+      {
+        "level": "upper",
+        "bedrooms": 1,
+        "type": "studio"
+      }
+    ],
+    "construction_type": "Factory-built / prefab modular"
+  },
+  "compliance_references": {
+    "title_25": "CCR \u00a73070",
+    "hsc_19990": "HSC \u00a719990",
+    "hsc_19993": "HSC \u00a719993",
+    "title_24": "T-24 energy compliance",
+    "calgreen": "CALGreen",
+    "hcd": "Factory-built handbook for local enforcement agencies"
+  },
+  "civil_engineering": {
+    "storm_drainage": {
+      "inlets": [
+        {
+          "grate_elev": 293.7,
+          "invert_elev": 292.7
+        },
+        {
+          "grate_elev": 294.0,
+          "invert_elev": 293.0
+        },
+        {
+          "grate_elev": 294.65,
+          "invert_elev": 293.65
+        },
+        {
+          "grate_elev": 293.83,
+          "invert_elev": 292.83
+        }
+      ],
+      "pipe_slope_min": 0.005,
+      "swale_bottom_slope_min": 0.005
+    },
+    "water_service": "Proposed water service per STD DTL W-1, P-48",
+    "sewer_service": "Proposed sewer service per STD DTL S-1, P-48",
+    "fencing": {
+      "existing": "Chainlink fence to remain",
+      "proposed": "12 inch PT headerboard",
+      "elevation": 292.24
+    },
+    "grading": {
+      "slope_percentages": [
+        -18.2,
+        -17.6,
+        -16.4,
+        -23.5,
+        -7.0,
+        -6.7,
+        -6.3
+      ],
+      "elevation_callouts": [
+        293.8,
+        294.0,
+        294.65,
+        294.4,
+        293.7,
+        293.5,
+        292.2,
+        292.3,
+        292.84,
+        292.33,
+        292.39,
+        292.34,
+        292.6,
+        292.7,
+        292.58,
+        292.62,
+        292.77,
+        292.86,
+        292.81,
+        292.0
+      ]
+    }
+  },
+  "sheet_index": [
+    {
+      "sheet": "Title",
+      "description": "Resume, Scope of Work, Sheet Index"
+    },
+    {
+      "sheet": "Site",
+      "description": "Floor Plans, Roof Plan, Elevations"
+    },
+    {
+      "sheet": "A1.0",
+      "description": "Cover Sheet"
+    },
+    {
+      "sheet": "E1.0",
+      "description": "Electrical Plans"
+    },
+    {
+      "sheet": "P1.0",
+      "description": "Plumbing Plans"
+    },
+    {
+      "sheet": "S1.0",
+      "description": "Stair Details"
+    },
+    {
+      "sheet": "S1.0",
+      "description": "Separation Plan & Sections"
+    },
+    {
+      "sheet": "D1.0",
+      "description": "Details"
+    },
+    {
+      "sheet": "D2.0",
+      "description": "Details"
+    },
+    {
+      "sheet": "T-24",
+      "description": "Title 24"
+    },
+    {
+      "sheet": "CalGreen",
+      "description": "CALGreen Compliance"
+    }
+  ],
+  "general_notes_excerpts": [
+    "Contractor shall contact Underground Service Alert and the City of Fresno",
+    "Factory-built home designed and inspected by state licensed 3rd party providers",
+    "All work per HCD Factory-built Handbook for local enforcement agencies"
+  ]
+}

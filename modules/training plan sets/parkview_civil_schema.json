@@ -1,0 +1,158 @@
+{
+  "source_pdf": "Parkview_civil_Original_lot1.pdf",
+  "sheet_info": {
+    "title": "GRADING, SITE, LANDSCAPING PLAN",
+    "sheet_number": "C100",
+    "sheet_of": "1 OF 1",
+    "scale": "1 IN = 10 FT",
+    "project_number": "P25-01553",
+    "date": "20250615",
+    "designer": "JTZ (Jonathan Todd Zumwalt)",
+    "developer": "ZUMWALT / SCHY REAL ESTATE GROUP @ RISE REALTY",
+    "designer_contact": "PO BOX 27032, FRESNO, CALIFORNIA 93729, 559-476-9012",
+    "developer_contact": "559-709-8044"
+  },
+  "property": {
+    "address": "549 N PARKWAY DRIVE, FRESNO CALIFORNIA 93728",
+    "apn": "449-341-09",
+    "status": "PRELIMINARY"
+  },
+  "site_features": {
+    "dwelling_types": [
+      "4' ADU",
+      "DUPLEX",
+      "2 ADU'S"
+    ],
+    "finished_floor_elevation_ft": 295.0,
+    "existing_fence": "CHAINLINK (TO REMAIN, PLACE 12 INCH PT HEADERBOARD)",
+    "existing_tree": "AUSTRALIAN WILLOW TREE (GEIJERA PARVIFLORA)",
+    "paving": "5IN PCC TYPE II / 12IN CSg (COMPACTED SUBGRADE)",
+    "ground_cover": "PROPOSED MULCH GROUND COVER",
+    "accessible_path": "ACCESSIBLE PATH OF TRAVEL"
+  },
+  "storm_drainage": {
+    "pipe_slope_minimum": 0.005,
+    "drain_inlets": [
+      {
+        "type": "INLET",
+        "grate": 293.7,
+        "invert": 292.7
+      },
+      {
+        "type": "INLET",
+        "grate": 294.0,
+        "invert": 293.0
+      },
+      {
+        "type": "INLET",
+        "grate": 294.65,
+        "invert": 293.65
+      },
+      {
+        "type": "INLET",
+        "grate": 293.83,
+        "invert": 292.83
+      }
+    ],
+    "outlets": [
+      {
+        "type": "BUBBLE UP OUTLET",
+        "grate": 292.3,
+        "invert": 291.3,
+        "note": "INSTALL 90\u00b0 SWEEP"
+      },
+      {
+        "type": "BUBBLE UP OUTLET",
+        "grate": 292.84,
+        "invert": 291.84
+      }
+    ],
+    "swales": [
+      {
+        "note": "PIPE AND SWALE BOTTOM (MIN SLOPE=0.0050)"
+      }
+    ]
+  },
+  "utilities": {
+    "water_service": {
+      "status": "PROPOSED",
+      "detail_ref": "STD DTL W-1, P-48",
+      "existing_note": "EXISTING WATER LINE (CONTRACTOR TO VERIFY DEPTH AND SIZE)"
+    },
+    "sewer_service": {
+      "status": "PROPOSED",
+      "detail_ref": "STD DTL S-1, P-48",
+      "existing_note": "EXISTING SANITARY SEWER LINE (ABOUT 8.70 FEET DEEP, CONTRACTOR TO VERIFY SIZE)"
+    }
+  },
+  "grading": {
+    "contour_elevations": [
+      291.72,
+      291.87,
+      291.97,
+      292.09,
+      292.2,
+      292.28,
+      292.3,
+      292.33,
+      292.34,
+      292.39,
+      292.55,
+      292.58,
+      292.6,
+      292.62,
+      292.65,
+      292.7,
+      292.72,
+      292.77,
+      292.81,
+      292.84,
+      292.85,
+      292.86
+    ],
+    "slope_percentages": [
+      -18.2,
+      -17.6,
+      -16.4,
+      -23.5,
+      -7.0,
+      -6.7,
+      -6.3
+    ],
+    "fence_elevation_ft": 292.24
+  },
+  "setbacks": {
+    "front_ft": 25,
+    "side_ft": 5,
+    "rear_ft": 20,
+    "notes": "FRONT=25', SIDE=5', REAR=20' (inferred from text '20' '25' '10' '10' '5')"
+  },
+  "legend_items": [
+    "AC - ASPHALTIC CONCRETE",
+    "BW - BACK OF WALK",
+    "C - CONCRETE",
+    "CB - CATCH BASIN",
+    "CHNLNK - CHAINLINK",
+    "CO - CLEANOUT",
+    "CONST - CONSTRUCT",
+    "CSg - COMPACTED SUBGRADE",
+    "DWY - DRIVEWAY",
+    "EX - EXISTING",
+    "FF - FINISHED FLOOR",
+    "FL - FLOWLINE",
+    "FT - FOOT",
+    "FTG - FOOTING",
+    "INV - INVERT",
+    "MH - MANHOLE",
+    "OG - ORIGINAL GROUND",
+    "P - PROPOSED",
+    "PCC - PORTLAND CEMENT CONCRETE",
+    "SD - STORM DRAIN",
+    "SS - SANITARY SEWER",
+    "SW - SWALE",
+    "TC - TOP OF CURB",
+    "TP - TOP OF PAVEMENT",
+    "WA - WATER LINE",
+    "WL - WALL"
+  ]
+}

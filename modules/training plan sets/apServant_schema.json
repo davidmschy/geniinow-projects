@@ -1,0 +1,58 @@
+{
+  "source_pdf": "apServant - Clients (1).pdf",
+  "project_type": "Factory-built home (SB1123 compliant)",
+  "property": {
+    "apn": "449-341-009",
+    "address": "549 N Parkview, Fresno, CA",
+    "designer": "PreFab Innovations",
+    "designer_address": "PO Box 109, Fresno, CA 93707"
+  },
+  "compliance_references": [
+    "Title 25, CCR §3070",
+    "HSC §19990",
+    "HSC §19993"
+  ],
+  "sb1123_provisions": {
+    "status": "SB1123 compliant project",
+    "provisions": [
+      "Lot splits are concurrent with plan review",
+      "Final map is recorded at project completion",
+      "Parking is not required if close to 'high-quality' mass transportation",
+      "Covered parking is not required",
+      "Each lot has its own trash service"
+    ],
+    "proposal": {
+      "subdivide_into_lots": 7,
+      "parking_shared_lots": 1,
+      "context": "Existing vacant, city-served lot"
+    }
+  },
+  "sheet_index": [
+    {"sheet": "TITLE", "description": "Resume, Scope of Work, Sheet Index"},
+    {"sheet": "SITE", "description": "Floor Plans, Roof Plan, Elevations"},
+    {"sheet": "A1.0", "description": "Cover Sheet"},
+    {"sheet": "E1.0", "description": "Electrical Plans"},
+    {"sheet": "P1.0", "description": "Plumbing Plans"},
+    {"sheet": "S1.0", "description": "Stair Details"},
+    {"sheet": "S1.0", "description": "Separation Plan & Sections"},
+    {"sheet": "D1.0", "description": "Details"},
+    {"sheet": "D2.0", "description": "Details"},
+    {"sheet": "T-24", "description": "Title 24 Energy Compliance"},
+    {"sheet": "CalGreen", "description": "CALGreen Compliance"},
+    {"sheet": "PV-1", "description": "Single Line Diagram, System Information"},
+    {"sheet": "PV-2", "description": "Mounting System Cut Sheet"},
+    {"sheet": "PV-3", "description": "Inverter Cut Sheet"},
+    {"sheet": "PV-4", "description": "Optimizer Cut Sheet"},
+    {"sheet": "PV-5", "description": "AC Disconnect Cut Sheet"},
+    {"sheet": "PV-6", "description": "Generator Cut Sheet"},
+    {"sheet": "PV-7", "description": "PV Labels"}
+  ],
+  "general_notes_excerpt": [
+    "Contractor shall contact Underground Service Alert 800-227-2600",
+    "Contractor is responsible to notify the Engineer",
+    "No work shall begin on any other improvements that have not been approved",
+    "Contractor shall isolate all existing services and vertical locations shall be recorded",
+    "All work shall be approved by the City of Fresno Engineer"
+  ],
+  "factory_built_handbook_reference": "https://www.hcd.ca.gov/building-standards/manufactured-modular-factory-built/factory-built-housing/docs/hcdfbh314.pdf"
+}

@@ -1,0 +1,338 @@
+{
+  "project_metadata": {
+    "apn": "449-341-009",
+    "address": "549 N Parkview, Fresno, CA",
+    "city": "Fresno",
+    "county": "Fresno County",
+    "state": "California",
+    "zip": "93728",
+    "developer": "HOME GENII DEVELOPMENT LLC",
+    "designer": "PreFab Innovations",
+    "generated_by": "Genii Studio AI",
+    "generated_date": "2026-04-19"
+  },
+  "lot_information": {
+    "width_ft": 100.0,
+    "depth_ft": 100.0,
+    "area_sf": 10000.0,
+    "area_acres": 0.23,
+    "zoning": "R-3N",
+    "elevation_ft": 301.8,
+    "slope_avg_percent": 3.11,
+    "slope_max_percent": 4.4,
+    "latitude": 36.7510999,
+    "longitude": -119.828455,
+    "flood_zone": null
+  },
+  "dwelling_specifications": {
+    "type": "2-story duplex",
+    "width_ft": 21.5,
+    "depth_ft": 31,
+    "total_sf": 1333,
+    "stories": 2,
+    "construction_type": "Factory-built / prefab modular with SIP walls/roof"
+  },
+  "compliance_references": {
+    "title_25": "CCR \u00a73070",
+    "hsc_19990": "HSC \u00a719990",
+    "hcd": "HCD Factory-built Handbook",
+    "title_24": "T-24 energy compliance required",
+    "calgreen": "CALGreen Tier 1 required",
+    "esr_sip": "ICC-ES ESR-5318 (PREFLEX SIPs)"
+  },
+  "sip_specifications": {
+    "manufacturer": "PREFLEX, Inc.",
+    "esr": "ESR-5318",
+    "wall_panels": "6.5 inch SIP (R-24.7)",
+    "roof_panels": "8.25 inch SIP (R-31.4)",
+    "wall_r_value": 24.7,
+    "roof_r_value": 31.4
+  },
+  "gis_data": {
+    "coordinates": {
+      "lat": 36.7510999,
+      "lon": -119.828455
+    },
+    "elevation": {
+      "elevation_m": 92.0,
+      "elevation_ft": 301.8,
+      "resolution_m": 90,
+      "source": "SRTM 90m (OpenTopography)"
+    },
+    "slope": {
+      "sample_count": 8,
+      "spacing_ft": 50,
+      "min_elev_ft": 301.8,
+      "max_elev_ft": 308.4,
+      "range_ft": 6.6,
+      "avg_slope_percent": 3.11,
+      "max_slope_percent": 4.4,
+      "samples": [
+        {
+          "dx_ft": -100,
+          "dy_ft": -100,
+          "elev_ft": 308.4
+        },
+        {
+          "dx_ft": -50,
+          "dy_ft": -100,
+          "elev_ft": 305.1
+        },
+        {
+          "dx_ft": -50,
+          "dy_ft": -50,
+          "elev_ft": 305.1
+        },
+        {
+          "dx_ft": 50,
+          "dy_ft": -50,
+          "elev_ft": 301.8
+        },
+        {
+          "dx_ft": 0,
+          "dy_ft": 0,
+          "elev_ft": 301.8
+        },
+        {
+          "dx_ft": 50,
+          "dy_ft": 0,
+          "elev_ft": 301.8
+        },
+        {
+          "dx_ft": -50,
+          "dy_ft": 50,
+          "elev_ft": 305.1
+        },
+        {
+          "dx_ft": 50,
+          "dy_ft": 50,
+          "elev_ft": 301.8
+        }
+      ]
+    },
+    "flood": {
+      "error": "HTTP Error 404: Not Found",
+      "note": "FEMA service may be unavailable"
+    },
+    "parcel": {
+      "error": "No parcel found in known GIS databases",
+      "note": "Manual lookup may be required"
+    }
+  },
+  "compliance_score": 69.0,
+  "compliance_report": {
+    "summary": {
+      "total_checks": 29,
+      "passed": 20,
+      "failed": 0,
+      "warnings": 9,
+      "compliance_score": 69.0
+    },
+    "checks": [
+      {
+        "category": "HCD-SHL620",
+        "item": "HCD insignia requirement noted",
+        "required": "Factory-built units must display HCD insignia per HSC \u00a719990",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "HCD-SHL620",
+        "item": "Title 25 CCR \u00a73070 reference",
+        "required": "Must reference Title 25 CCR \u00a73070 for factory-built standards",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "HCD-SHL620",
+        "item": "Transport dimensions declared",
+        "required": "Transport width/depth must be declared (max 16' wide per transport reg)",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "HCD-SHL620",
+        "item": "Module width \u2264 16 feet (transport limit)",
+        "required": "Module width must be \u2264 16' for highway transport (found: 21.5')",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "HCD-SHL620",
+        "item": "Foundation/anchorage details referenced",
+        "required": "Must reference foundation/anchorage per HCD installation requirements",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "HCD-SHL620",
+        "item": "Installation manual referenced",
+        "required": "Must reference manufacturer installation manual",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "Title 24 compliance noted",
+        "required": "Must note Title 24 energy compliance",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "Wall insulation \u2265 R-21 (wood frame)",
+        "required": "Wall R-value must be \u2265 R-21 (found: R-24.7)",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "Roof insulation \u2265 R-30 (low-rise residential)",
+        "required": "Roof R-value must be \u2265 R-30 for Title 24 compliance (found: R-31.4)",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "CF1R-ENV (envelope) indicated",
+        "required": "CF1R-ENV energy calculation required for envelope",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "CF1R-PRF (performance) indicated",
+        "required": "CF1R-PRF performance method calculation required",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "Solar readiness noted",
+        "required": "Solar PV readiness required for new construction in CA",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "T24-CF1R",
+        "item": "HERS rater indicated",
+        "required": "HERS verification required for Title 24 compliance",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "CALGreen",
+        "item": "CALGreen compliance noted",
+        "required": "Must note CALGreen compliance",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "CALGreen",
+        "item": "Storm water pollution prevention plan (SWPPP)",
+        "required": "SWPPP required for construction sites > 1 acre",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "CALGreen",
+        "item": "Construction waste management plan",
+        "required": "Waste diversion plan required for CALGreen",
+        "status": "WARN",
+        "severity": "warning"
+      },
+      {
+        "category": "SIP",
+        "item": "ICC-ES ESR reference",
+        "required": "Must reference ICC-ES ESR-5318 for PREFLEX SIPs",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "SIP",
+        "item": "SIP manufacturer declared",
+        "required": "Must declare SIP manufacturer",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "SIP",
+        "item": "Wall panel spec declared",
+        "required": "Must declare wall panel specification",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "SIP",
+        "item": "Roof panel spec declared",
+        "required": "Must declare roof panel specification",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "Site",
+        "item": "Lot dimensions declared",
+        "required": "Must declare lot dimensions",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "Site",
+        "item": "Zoning declared",
+        "required": "Must declare zoning designation",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "Site",
+        "item": "Address declared",
+        "required": "Must declare property address",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "Site",
+        "item": "APN declared",
+        "required": "Must declare APN",
+        "status": "PASS",
+        "severity": "error"
+      },
+      {
+        "category": "Site",
+        "item": "Elevation data available",
+        "required": "Should have elevation data for drainage design",
+        "status": "PASS",
+        "severity": "warning"
+      },
+      {
+        "category": "Site",
+        "item": "Slope data available",
+        "required": "Should have slope data for grading design",
+        "status": "PASS",
+        "severity": "warning"
+      },
+      {
+        "category": "Site",
+        "item": "Front setback \u2265 20 ft",
+        "required": "Front setback typically minimum 20' for residential",
+        "status": "PASS",
+        "severity": "warning"
+      },
+      {
+        "category": "Site",
+        "item": "Side setbacks \u2265 3 ft",
+        "required": "Side setbacks typically minimum 3-5'",
+        "status": "PASS",
+        "severity": "warning"
+      },
+      {
+        "category": "Site",
+        "item": "Rear setback \u2265 15 ft",
+        "required": "Rear setback typically minimum 15-20'",
+        "status": "PASS",
+        "severity": "warning"
+      }
+    ],
+    "submit_ready": true
+  }
+}

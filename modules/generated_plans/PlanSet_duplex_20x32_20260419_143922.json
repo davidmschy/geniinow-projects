@@ -1,0 +1,69 @@
+{
+  "project_name": "PlanSet_duplex_20x32_20260419_143922",
+  "prompt": "20x32 2-bed 2-bath duplex, 2-story, SIP construction, Hanford CA",
+  "parameters": {
+    "type": "duplex",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "stories": 2,
+    "width": 20,
+    "depth": 32,
+    "height": 10,
+    "construction": "sip",
+    "jurisdiction": "hanford_ca",
+    "climate_zone": 8,
+    "modules": [
+      {
+        "id": "Module_A",
+        "width": 10.0,
+        "depth": 32,
+        "height": 10,
+        "floor": 1,
+        "unit": 1,
+        "type": "unit_half"
+      },
+      {
+        "id": "Module_B",
+        "width": 10.0,
+        "depth": 32,
+        "height": 10,
+        "floor": 1,
+        "unit": 2,
+        "type": "unit_half"
+      },
+      {
+        "id": "Module_C",
+        "width": 10.0,
+        "depth": 32,
+        "height": 10,
+        "floor": 2,
+        "unit": 1,
+        "type": "unit_half"
+      },
+      {
+        "id": "Module_D",
+        "width": 10.0,
+        "depth": 32,
+        "height": 10,
+        "floor": 2,
+        "unit": 2,
+        "type": "unit_half"
+      },
+      {
+        "id": "Module_5",
+        "width": 20,
+        "depth": 4.0,
+        "height": 0.5,
+        "floor": 2,
+        "unit": 0,
+        "type": "balcony_on_site"
+      }
+    ],
+    "unit_count": 2,
+    "roof_type": "gable",
+    "foundation": "crawl_space",
+    "project_name": "PlanSet_duplex_20x32_20260419_143922"
+  },
+  "generated_at": "2026-04-19T14:39:23.072202",
+  "file_path": "/Users/davidschy/geniinow-projects/modules/generated_plans/PlanSet_duplex_20x32_20260419_143922.FCStd"
+}

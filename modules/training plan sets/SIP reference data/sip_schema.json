@@ -1,0 +1,57 @@
+{
+  "manufacturer": "PREFLEX, Inc.",
+  "product": "Structural Insulated Panels (SIPs)",
+  "esr_number": "ESR-5318",
+  "code_compliance": [
+    "2024 IBC",
+    "2021 IBC",
+    "2018 IBC",
+    "2024 IRC",
+    "2021 IRC",
+    "2018 IRC"
+  ],
+  "panel_types": {
+    "wall_panels": {
+      "thickness_options": [
+        "4.5in",
+        "6.5in",
+        "8.25in"
+      ],
+      "osb_thickness": "7/16 inch",
+      "foam_core": "Expanded polystyrene (EPS)",
+      "typical_r_value_per_inch": 3.8
+    },
+    "roof_panels": {
+      "thickness_options": [
+        "6.5in",
+        "8.25in",
+        "10.25in",
+        "12.25in"
+      ],
+      "osb_thickness": "7/16 inch",
+      "foam_core": "Expanded polystyrene (EPS)"
+    }
+  },
+  "connection_details": {
+    "wall_to_foundation": "Sill plate with anchor bolts",
+    "wall_to_wall": "Spline connection (wood or OSB)",
+    "wall_to_roof": "Rafter/beam connection with hurricane clips",
+    "panel_joints": "Foam sealant + spline + OSB gusset"
+  },
+  "adu_plan_set_structure": {
+    "sheet_count": 53,
+    "sheets": [
+      "A000 Sheet List",
+      "A100 3D View",
+      "A101 Floor Plan",
+      "A102-A104 Sections",
+      "A105 Exterior Elevations"
+    ],
+    "typical_dims": "20' x 32' ADU, 6\" wall, 8\" roof"
+  },
+  "extracted_text_samples": {
+    "esr_first_page": " \n \n  \n  \n Page 1 of 18 \n \nDIVISION: 06 00 00\u2014\nWOOD, PLASTICS, AND \nCOMPOSITES \nSection: 06 12 00\u2014\nStructural Panels \nREPORT HOLDER:  \nPREFLEX, INC \n \nEVALUATION SUBJECT:  \nSTRUCTURAL \nINSULATED PANELS \n(SIPS) \n \n \n1.0 EVALUATION SCOPE \nCompliance with the following codes: \n\uf0be 2024, 2021, and 2018 International Building Code\u00ae (IBC) \n\uf0be 2024, 2021, and 2018 International Residential Code\u00ae (IRC) \nProperty evaluated: \n\uf0be Structural  \n\uf0be Fire Resistance \n\uf0be Thermal Barrier \n2.0 USES  \n2.1 General: \nStructural Insulated Panels are used as structural insulated roof, floor  and wall panels capable of resisting \ntransverse, axial and in-plane shear loads. \n2.2 Construction Types: \nStructural Insulated Panels  shall be considered combustible building elements when determining the \nconstruction type in a",
+    "adu_first_pages": "ScaleChecked byDrawn byDateProject number19/09/2022 04:57:59 p. m.\nSheet ListADU 20X32\nAgo/29/2022JVCheckerA000\nSheet ListSheetNumberSheet NameSheet IssueDateDrawn By Checked ByA000 Sheet List 03/09/22 JV CheckerA100 ADU 20X32 3D View 08/03/22 OD VerificadorA101 ADU 20X32 08/03/22 OD VerificadorA102 Section 02/01/22 JV FTA103 Section 04/08/22 JV CheckerA104 Section 08/09/22 OD VerificadorA105 Exterior View \"A\" 08/08/22 OD VerificadorA106 Exterior View \"B\" 08/08/22 OD VerificadorA107 Exterior View \"C\" 08/08/22 OD VerificadorA108 Exterior View \"D\" 08/08/22 OD VerificadorA109 Beam 02/16/22 JV / OD CheckerA110 Foundation 04/08/22 OD CheckerA111 Basement Lumbers 04/08/22 OD CheckerA112 Panel Floor's 04/11/22 OD CheckerA113 Panel Roof's 04/11/22 OD CheckerA200 Quantities 01/06/22 JV GGA200.1 Qua",
+    "library_first_pages": "www.pre/f_lexinc.com\nLibrary Details\nCATEGORY DESCRIPTION OF DETAIL UPDATE DETAIL\nWall to \nFoundation\nWall to Upper \nFloor\nWall to Corner\nPF-100.1\nPF-100.2\nPF-100.5\nPF-100.6\nSIP Wall / Slab_ STD\nSIP Wall / Slab_ HS\nSIP Wall / Conventional Floor_STD\nSIP Wall / Conventional Floor_HS\nCONSTRUCTION \nASSEMBLY DETAILS\nPF-200.1\nPF-200.2\nPF-200.3\nSIP Wall / Floor / Joist Hanger\nSIP Wall / Floor / Joist Perpendicular\nSIP Wall / Floor / Joist Parallel\nREV. DATE: NOV,16. 2022\nWall to Roof\nRoof Ridge and \nValley\nPanel to Beam \nand Connection \nDetails\nOpening Details\nSIP Wall Corner PF-300.1\nSIP Wall Angled"
+  }
+}
