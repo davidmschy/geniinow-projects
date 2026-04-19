@@ -1,99 +1,101 @@
 """
-FullPipeline.py - One command from Address/APN to complete plan set
+FullPipeline.py - One-command deployment
+
+Runs: Address → Geo → GIS → Site Plan → Floor Plan → Compliance → ERPNext → GitHub
+
+Usage:
+    python3 FullPipeline.py --address "549 N Parkview, Fresno, CA" --apn "449-341-009"
 """
 
-import sys, os, subprocess, json, argparse
+import sys, os, json, subprocess
+from pathlib import Path
 
 sys.path.insert(0, os.path.expanduser("~/geniinow-projects/macros"))
-from GenerateSitePlan import generate as generate_site_plan
-from ComplianceEngine import run_compliance_check
 
-def export_step(apn_clean):
-    freecad_python = "/Applications/FreeCAD.app/Contents/Resources/bin/python"
-    freecad_lib = "/Applications/FreeCAD.app/Contents/Resources/lib"
-    fcstd_path = os.path.expanduser(f"~/geniinow-projects/output/SitePlan_{apn_clean}.FCStd")
-    step_path = os.path.expanduser(f"~/geniinow-projects/output/SitePlan_{apn_clean}.stp")
-    
-    script = f"""
-import FreeCAD, Part
-doc = FreeCAD.openDocument('{fcstd_path}')
-objs = [obj for obj in doc.Objects if hasattr(obj, 'Shape')]
-Part.export(objs, '{step_path}')
-print(f'Exported: {step_path}')
-"""
-    env = os.environ.copy()
-    env["PYTHONPATH"] = freecad_lib
-    result = subprocess.run([freecad_python, "-c", script], capture_output=True, text=True, env=env)
-    return result.stdout.strip()
+def run_step(name, cmd, cwd=None):
+    print(f"\n[{name}]")
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd)
+    if result.returncode != 0:
+        print(f"  ERROR: {result.stderr[:500]}")
+        return None
+    print(f"  OK")
+    return result.stdout
 
-def publish_github(project_data, apn_clean):
-    from PlanSetPublisher import publish_to_github
-    json_path = os.path.expanduser(f"~/geniinow-projects/output/SitePlan_{apn_clean}_data.json")
-    return publish_to_github(project_data, json_path)
-
-def run_full_pipeline(address=None, apn=None, **kwargs):
-    print("=" * 60)
-    print("GENII STUDIO - FULL PLAN SET PIPELINE")
-    print("=" * 60)
-    
-    # Generate site plan
-    print("\n[STEP 1/5] Generating site plan...")
-    project_data = generate_site_plan(address=address, apn=apn, **kwargs)
-    apn_clean = project_data['project_metadata']['apn'].replace('-', '_')
-    
-    # Export STEP
-    print("\n[STEP 2/5] Exporting STEP file...")
-    step_out = export_step(apn_clean)
-    print(f"  {step_out}")
-    
-    # Compliance check
-    print("\n[STEP 3/5] Running compliance check...")
-    json_path = os.path.expanduser(f"~/geniinow-projects/output/SitePlan_{apn_clean}_data.json")
-    compliance = run_compliance_check(json_path)
-    score = compliance['summary']['compliance_score']
-    print(f"  Score: {score}%")
-    
-    project_data['compliance_score'] = score
-    project_data['compliance_report'] = compliance
-    with open(json_path, "w") as f:
-        json.dump(project_data, f, indent=2)
-    
-    # Publish to GitHub
-    print("\n[STEP 4/5] Publishing to GitHub...")
-    repo_name = f"site-plan-{apn_clean.lower()}"
-    repo_url = f"https://github.com/davidmschy/{repo_name}"
-    publish_github(project_data, apn_clean)
-    print(f"  {repo_url}")
-    
-    # Summary
-    meta = project_data.get("project_metadata", {})
-    print("\n" + "=" * 60)
-    print("PIPELINE COMPLETE")
-    print("=" * 60)
-    print(f"Project: {meta.get('address', 'N/A')}")
-    print(f"APN: {meta.get('apn', 'N/A')}")
-    print(f"Compliance: {score}%")
-    print(f"GitHub: {repo_url}")
-    print(f"Files:")
-    print(f"  - SitePlan_{apn_clean}.FCStd")
-    print(f"  - SitePlan_{apn_clean}.stp")
-    print(f"  - SitePlan_{apn_clean}_data.json")
-    print("=" * 60)
-    
-    return project_data
-
-if __name__ == "__main__":
+def main():
+    import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--address")
-    parser.add_argument("--apn")
+    parser.add_argument("--address", required=True)
+    parser.add_argument("--apn", required=True)
     parser.add_argument("--lot-width", type=float, default=100)
     parser.add_argument("--lot-depth", type=float, default=100)
-    parser.add_argument("--dwelling-width", type=float, default=21.5)
-    parser.add_argument("--dwelling-depth", type=float, default=31)
-    parser.add_argument("--dwelling-sf", type=int, default=1333)
-    parser.add_argument("--stories", type=int, default=2)
-    parser.add_argument("--zoning", default="R-3N")
-    parser.add_argument("--type", default="2-story duplex", dest="dwelling_type")
+    parser.add_argument("--skip-erpnext", action="store_true", help="Skip ERPNext integration")
+    parser.add_argument("--skip-github", action="store_true", help="Skip GitHub publishing")
+    parser.add_argument("--skip-floorplan", action="store_true", help="Skip floor plan generation")
     args = parser.parse_args()
     
-    run_full_pipeline(**vars(args))
+    output_dir = os.path.expanduser("~/geniinow-projects/output")
+    os.makedirs(output_dir, exist_ok=True)
+    
+    print("="*60)
+    print("GENII STUDIO - FULL PIPELINE")
+    print("="*60)
+    print(f"Address: {args.address}")
+    print(f"APN: {args.apn}")
+    
+    # Step 1: Generate site plan
+    run_step("SITE PLAN",
+        [sys.executable, "GenerateSitePlan.py",
+         "--address", args.address,
+         "--apn", args.apn,
+         "--lot-width", str(args.lot_width),
+         "--lot-depth", str(args.lot_depth),
+         "--output", output_dir],
+        cwd=os.path.expanduser("~/geniinow-projects/macros"))
+    
+    # Find generated data file
+    data_file = None
+    for f in Path(output_dir).glob(f"*_{args.apn.replace('-', '_')}_data.json"):
+        data_file = str(f)
+        break
+    
+    if not data_file:
+        print("ERROR: No project data file found")
+        return
+    
+    # Step 2: Floor plan
+    if not args.skip_floorplan:
+        run_step("FLOOR PLAN",
+            [sys.executable, "FloorPlanGenerator.py",
+             "--project-data", data_file,
+             "--output", output_dir],
+            cwd=os.path.expanduser("~/geniinow-projects/macros"))
+    
+    # Step 3: Compliance check
+    run_step("COMPLIANCE",
+        [sys.executable, "ComplianceEngine.py",
+         "--project-data", data_file],
+        cwd=os.path.expanduser("~/geniinow-projects/macros"))
+    
+    # Step 4: ERPNext integration
+    if not args.skip_erpnext:
+        run_step("ERPNEXT",
+            [sys.executable, "ERPNext_Integration.py",
+             "--project-data", data_file,
+             "--files-dir", output_dir],
+            cwd=os.path.expanduser("~/geniinow-projects/macros"))
+    
+    # Step 5: GitHub publishing
+    if not args.skip_github:
+        run_step("GITHUB",
+            [sys.executable, "PlanSetPublisher.py",
+             "--project-data", data_file],
+            cwd=os.path.expanduser("~/geniinow-projects/macros"))
+    
+    print("\n" + "="*60)
+    print("PIPELINE COMPLETE")
+    print("="*60)
+    print(f"Project data: {data_file}")
+    print(f"Output: {output_dir}")
+
+if __name__ == "__main__":
+    main()
