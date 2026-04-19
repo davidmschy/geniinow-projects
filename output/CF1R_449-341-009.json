@@ -1,0 +1,68 @@
+{
+  "project": {
+    "apn": "449-341-009",
+    "address": "549 N Parkview, Fresno, CA",
+    "city": "Fresno",
+    "county": "Fresno County",
+    "state": "California",
+    "zip": "93728",
+    "developer": "HOME GENII DEVELOPMENT LLC",
+    "designer": "PreFab Innovations",
+    "generated_by": "Genii Studio AI",
+    "generated_date": "2026-04-19"
+  },
+  "cf1r_env": {
+    "form": "CF1R-ENV",
+    "climate_zone": "12",
+    "city": "Fresno",
+    "total_ua_btu_hr_f": 118.37,
+    "standard_ua_btu_hr_f": 128.24,
+    "compliance_ratio": 0.923,
+    "status": "FAIL",
+    "assemblies": [
+      {
+        "name": "SIP Wall",
+        "u_factor": 0.04048582995951417,
+        "area_sqft": 1102.5,
+        "ua": 44.64,
+        "description": "6.5\" SIP wall, R-24.7"
+      },
+      {
+        "name": "SIP Roof",
+        "u_factor": 0.03184713375796178,
+        "area_sqft": 766.4749999999999,
+        "ua": 24.41,
+        "description": "8.25\" SIP roof, R-31.4"
+      },
+      {
+        "name": "Steel Floor",
+        "u_factor": 0.029,
+        "area_sqft": 666.5,
+        "ua": 19.33,
+        "description": "14-ga C-channel steel subfloor with insulation"
+      },
+      {
+        "name": "Window",
+        "u_factor": 0.3,
+        "area_sqft": 99.975,
+        "ua": 29.99,
+        "description": "Double-pane low-E vinyl window"
+      }
+    ],
+    "failures": [
+      "SIP Roof: U=0.0318 exceeds baseline 0.0270"
+    ]
+  },
+  "cf1r_prf": {
+    "form": "CF1R-PRF",
+    "climate_zone": "12",
+    "floor_area_sqft": 666.5,
+    "standard_energy_kbtu_ft2_yr": 25.0,
+    "proposed_energy_kbtu_ft2_yr": 23.08,
+    "tdv_compliance": true,
+    "envelope_multiplier": 0.923,
+    "status": "PASS",
+    "note": "Simplified calculation. Full EnergyPlus modeling recommended for submission."
+  },
+  "generated_at": "2026-04-19T15:51:24.388781"
+}
